@@ -51,7 +51,7 @@ class Ball:
         if not repeal:
             damping = normD/(WIDTH+HEIGTH)
         self.v += damping*a*deltaT
-        self.pos += self.v*deltaT   
+        self.pos += self.v*deltaT+0.5*a*deltaT**2   
              
 x = np.linspace(5+2*r,WIDTH-5+2*r,50)
 y = np.linspace(5+2*r,HEIGTH-5+2*r,50)
